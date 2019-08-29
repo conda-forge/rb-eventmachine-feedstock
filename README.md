@@ -1,7 +1,7 @@
 About rb-eventmachine
 =====================
 
-Home: https://rubygems.orgs/gems/eventmachine
+Home: https://rubygems.org/gems/eventmachine
 
 Package license: GPL-2.0
 
