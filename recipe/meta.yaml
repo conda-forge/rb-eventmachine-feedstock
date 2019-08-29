@@ -10,7 +10,7 @@ source:
   sha256: 994016e42aa041477ba9cff45cbe50de2047f25dd418eba003e84f0d16560972
 
 build:
-  number: 0
+  number: 1
   script:
     - gem install --norc -l -V --ignore-dependencies {{ name }}-{{ version }}.gem
     - gem unpack {{ name }}-{{ version }}.gem
@@ -32,7 +32,7 @@ test:
     - ruby -r {{ name }} -e 'exit 0'
 
 about:
-  home: https://rubygems.orgs/gems/{{ name }}
+  home: https://rubygems.org/gems/{{ name }}
   license: GPL-2.0
   license_family: GPL
   license_file: {{ name }}-{{ version }}/LICENSE
