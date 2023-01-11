@@ -8,12 +8,20 @@ jobs:
     vmImage: ubuntu-latest
   strategy:
     matrix:
-      linux_64_ruby2.6:
-        CONFIG: linux_64_ruby2.6
+      linux_64_openssl1.1.1ruby2.6:
+        CONFIG: linux_64_openssl1.1.1ruby2.6
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
-      linux_64_ruby3.1:
-        CONFIG: linux_64_ruby3.1
+      linux_64_openssl1.1.1ruby3.1:
+        CONFIG: linux_64_openssl1.1.1ruby3.1
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
+      linux_64_openssl3ruby2.6:
+        CONFIG: linux_64_openssl3ruby2.6
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
+      linux_64_openssl3ruby3.1:
+        CONFIG: linux_64_openssl3ruby3.1
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
   timeoutInMinutes: 360
