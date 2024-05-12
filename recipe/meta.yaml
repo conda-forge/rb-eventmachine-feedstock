@@ -10,17 +10,18 @@ source:
   sha256: 994016e42aa041477ba9cff45cbe50de2047f25dd418eba003e84f0d16560972
 
 build:
-  number: 2
+  number: 3
   script:
     - gem install -N -l -V --norc --ignore-dependencies {{ name }}-{{ version }}.gem
     - gem unpack {{ name }}-{{ version }}.gem
     - make -C {{ PREFIX }}/lib/ruby/gems/{{ ruby }}.0/gems/{{ name }}-{{ version }}/ext clean
-  skip: {{ win }}
+  skip: true  # [win]
 
 requirements:
   build:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
+    - make  # [unix]
   host:
     - ruby
     - openssl
